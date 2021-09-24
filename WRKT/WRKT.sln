@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1622
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WRKT", "WRKT\WRKT.csproj", "{C29527D2-428D-47E5-973C-EACF744A30F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WRKT", "WRKT\WRKT.csproj", "{A4CF5579-3261-420E-A705-961C4381DE2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C29527D2-428D-47E5-973C-EACF744A30F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C29527D2-428D-47E5-973C-EACF744A30F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C29527D2-428D-47E5-973C-EACF744A30F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C29527D2-428D-47E5-973C-EACF744A30F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4CF5579-3261-420E-A705-961C4381DE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4CF5579-3261-420E-A705-961C4381DE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4CF5579-3261-420E-A705-961C4381DE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4CF5579-3261-420E-A705-961C4381DE2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {095D376B-E6DE-4023-BAA7-D237942628BF}
+		SolutionGuid = {8DC5879F-CF86-49B4-B0BF-D35B05D85302}
 	EndGlobalSection
 EndGlobal
