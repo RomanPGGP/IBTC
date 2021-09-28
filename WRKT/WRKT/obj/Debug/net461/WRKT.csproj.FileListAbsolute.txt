@@ -352,7 +352,6 @@ C:\Users\USER 15\source\repos\WRKT\WRKT\bin\Debug\net461\System.Xml.XmlDocument.
 C:\Users\USER 15\source\repos\WRKT\WRKT\bin\Debug\net461\System.Xml.XmlSerializer.dll
 C:\Users\USER 15\source\repos\WRKT\WRKT\bin\Debug\net461\System.Xml.XPath.dll
 C:\Users\USER 15\source\repos\WRKT\WRKT\bin\Debug\net461\System.Xml.XPath.XDocument.dll
-C:\Users\USER 15\source\repos\WRKT\WRKT\obj\Debug\net461\UserSecretsAssemblyInfo.cs
 C:\Users\USER 15\source\repos\WRKT\WRKT\obj\Debug\net461\WRKT.RazorCoreGenerate.cache
 C:\Users\USER 15\source\repos\WRKT\WRKT\obj\Debug\net461\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 C:\Users\USER 15\source\repos\WRKT\WRKT\obj\Debug\net461\Razor\Views\Home\About.g.cshtml.cs
@@ -378,3 +377,5 @@ C:\Users\USER 15\source\repos\WRKT\WRKT\obj\Debug\net461\Razor\Areas\Identity\Pa
 C:\Users\USER 15\source\repos\WRKT\WRKT\obj\Debug\net461\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
 C:\Users\USER 15\source\repos\WRKT\WRKT\obj\Debug\net461\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\USER 15\source\repos\WRKT\WRKT\obj\Debug\net461\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
+C:\Users\USER 15\source\repos\WRKT\WRKT\obj\Debug\net461\Razor\Views\User\EmployeeHome.g.cshtml.cs
+C:\Users\USER 15\source\repos\WRKT\WRKT\obj\Debug\net461\UserSecretsAssemblyInfo.cs

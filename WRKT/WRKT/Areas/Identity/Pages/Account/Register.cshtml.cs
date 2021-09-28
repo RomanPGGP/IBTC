@@ -40,6 +40,20 @@ namespace WRKT.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [Display(Name = "FirstName")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [Display(Name = "LastName")]
+            public string LastName { get; set; }
+
+            [Required]
+            [Phone]
+            [Display(Name = "PhoneNumber")]
+            [RegularExpression(@"^(\d{10})$", ErrorMessage = "Please provide a valid phone number")]
+            public string PhoneNumber { get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -68,9 +82,14 @@ namespace WRKT.Areas.Identity.Pages.Account
             {
                 var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
+
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+                    // Save in DB
+
+                    //********
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     var callbackUrl = Url.Page(

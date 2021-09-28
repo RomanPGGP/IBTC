@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETFramework,Version=v4.6.1/win7-x86",
-    "signature": "50f0151ee885eabd5b6b2fbf91bf08f3743f9dce"
+    "signature": "f18d5fdfbbb1aec7776c8e65f08c7679bd910b8a"
   },
   "compilationOptions": {
     "defines": [
@@ -37,6 +37,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "2.1.14",
           "Microsoft.VisualStudio.Web.BrowserLink": "2.1.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
+          "System.Data.SqlClient": "4.8.3",
           "Microsoft.CSharp.Reference": "4.0.0.0",
           "mscorlib": "4.0.0.0",
           "System.ComponentModel.Composition": "4.0.0.0",
@@ -1593,7 +1594,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer/2.1.14": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "2.1.14",
-          "System.Data.SqlClient": "4.5.1"
+          "System.Data.SqlClient": "4.8.3"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
@@ -2072,7 +2073,7 @@
         }
       },
       "System.Console/4.3.0": {},
-      "System.Data.SqlClient/4.5.1": {
+      "System.Data.SqlClient/4.8.3": {
         "compile": {
           "ref/net461/System.Data.SqlClient.dll": {}
         }
@@ -2241,6 +2242,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "2.1.14",
           "Microsoft.VisualStudio.Web.BrowserLink": "2.1.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
+          "System.Data.SqlClient": "4.8.3",
           "Microsoft.CSharp.Reference": "4.0.0.0",
           "mscorlib": "4.0.0.0",
           "System.ComponentModel.Composition": "4.0.0.0",
@@ -3177,7 +3179,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer/2.1.14": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "2.1.14",
-          "System.Data.SqlClient": "4.5.1"
+          "System.Data.SqlClient": "4.8.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
@@ -3656,7 +3658,7 @@
         }
       },
       "System.Console/4.3.0": {},
-      "System.Data.SqlClient/4.5.1": {
+      "System.Data.SqlClient/4.8.3": {
         "runtime": {
           "lib/net461/System.Data.SqlClient.dll": {}
         }
@@ -4793,12 +4795,12 @@
       "path": "system.console/4.3.0",
       "hashPath": "system.console.4.3.0.nupkg.sha512"
     },
-    "System.Data.SqlClient/4.5.1": {
+    "System.Data.SqlClient/4.8.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HV8pqcYlH7bNnX1n4i6F5RG7r6+WVErE2jUMNjXRrrkLFVIWLoerXtXDFs80pHvDBjxoG4rG0p2BUH3iXRs7hQ==",
-      "path": "system.data.sqlclient/4.5.1",
-      "hashPath": "system.data.sqlclient.4.5.1.nupkg.sha512"
+      "sha512": "sha512-yERfVLXAY0QbylAgaGLByYN0hFxX28aeEQ0hUgJO+Ntn1AfmWl5HHUoYJA0Yl9HhIUUJHVaS/Sw/RLZr5aaC+A==",
+      "path": "system.data.sqlclient/4.8.3",
+      "hashPath": "system.data.sqlclient.4.8.3.nupkg.sha512"
     },
     "System.Diagnostics.Debug/4.3.0": {
       "type": "package",
