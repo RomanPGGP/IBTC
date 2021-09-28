@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System.Data.SqlClient;
 
 namespace WRKT.Areas.Identity.Pages.Account
 {
@@ -19,6 +20,11 @@ namespace WRKT.Areas.Identity.Pages.Account
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        static public SqlConnection connection;
+        static public SqlCommand scommand;
+        static public string connectionString = "workstation id=WRKTAPP.mssql.somee.com;packet size=4096;user id=RomanPG_SQLLogin_1;pwd=2u9ukyu3ge;" +
+                                                "data source=WRKTAPP.mssql.somee.com;persist security info=False;initial catalog=WRKTAPP";
+
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
@@ -68,6 +74,15 @@ namespace WRKT.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+            
+            [Required]
+            [Display(Name = "EmployerID")]
+            public int EmployerID { get; set; }
+
+            [Required]
+            [Display(Name = "Employer")]
+            public bool Administrator { get; set; }
+            
         }
 
         public void OnGet(string returnUrl = null)
@@ -80,16 +95,72 @@ namespace WRKT.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
+                var user = new IdentityUser { UserName = Input.FirstName, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    // Save in DB
+                    // Save in DB **************************************************************
+                    using (connection = new SqlConnection(connectionString))
+                    {
 
-                    //********
+                        try
+                        {
+                            connection.Open();
+                        }
+                        catch (Exception)
+                        {
+
+                            throw; //Connection error
+                        }
+                        
+                        using (scommand = new SqlCommand())
+                        {
+                            scommand.Connection = connection;
+
+                            if (Input.Administrator)
+                            {
+                                scommand.CommandText = "INSERT INTO EMPLOYER_DATA (EmployerID,FirstName,LastName,EmployeeCount,PhoneNumber,Email,Password) " +
+                                                   " VALUES(@id,@firstname,@lastname,@employercount,@phonenumber,@mail,@password)";
+
+                                scommand.Parameters.AddWithValue("@id", 55);
+                                scommand.Parameters.AddWithValue("@firstname", Input.FirstName);
+                                scommand.Parameters.AddWithValue("@lastname", Input.LastName);
+                                scommand.Parameters.AddWithValue("@employercount", 0);
+                                scommand.Parameters.AddWithValue("@phonenumber", Input.PhoneNumber);
+                                scommand.Parameters.AddWithValue("@mail", Input.Email);
+                                scommand.Parameters.AddWithValue("@password", Input.Password);
+
+                            }
+                            else
+                            {
+                                scommand.CommandText = "INSERT INTO EMPLOYEE_DATA (EmployeeID,FirstName,LastName,PhoneNumber,Email,EmployerID,Password) " +
+                                                   " VALUES(@id,@firstname,@lastname,@phonenumber,@mail,@employerid,@password)";
+
+                                scommand.Parameters.AddWithValue("@id", 105);
+                                scommand.Parameters.AddWithValue("@firstname", Input.FirstName);
+                                scommand.Parameters.AddWithValue("@lastname", Input.LastName);
+                                scommand.Parameters.AddWithValue("@phonenumber", Input.PhoneNumber);
+                                scommand.Parameters.AddWithValue("@mail", Input.Email);
+                                scommand.Parameters.AddWithValue("@employerid", Input.EmployerID);
+                                scommand.Parameters.AddWithValue("@password", Input.Password);
+
+                            }
+                            
+                            try
+                            {
+                                scommand.ExecuteNonQuery();
+                            }
+                            catch (Exception)
+                            {
+
+                                throw; //Parameters error
+                            }
+                        }
+                    }
+                    //*****************************************************************
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     var callbackUrl = Url.Page(

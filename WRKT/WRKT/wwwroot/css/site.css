@@ -52,3 +52,12 @@ body {
     width: 100%;
     height: 80%;
 }
+
+/*Employee landing page*/
+
+.containeremployee {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(7, 14%);
+}
+

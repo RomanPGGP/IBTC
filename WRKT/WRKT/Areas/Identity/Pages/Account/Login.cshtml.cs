@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System.Data.SqlClient;
 
 namespace WRKT.Areas.Identity.Pages.Account
 {
@@ -17,6 +18,10 @@ namespace WRKT.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        static public SqlConnection connection;
+        static public SqlCommand scommand;
+        static public string connectionString = "workstation id=WRKTAPP.mssql.somee.com;packet size=4096;user id=RomanPG_SQLLogin_1;pwd=2u9ukyu3ge;" +
+                                                "data source=WRKTAPP.mssql.somee.com;persist security info=False;initial catalog=WRKTAPP";
 
         public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger)
         {

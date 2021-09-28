@@ -42,6 +42,8 @@ namespace WRKT.Controllers
                         string employeeEmail = sdatareader["Email"].ToString();
                         ViewData["UserMail"] = employeeEmail;
                     }
+
+                    sdatareader.Close();
                 }
 
             }

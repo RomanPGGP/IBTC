@@ -42,6 +42,16 @@
                 <input asp-for="Input.ConfirmPassword" class="form-control" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="Input.EmployerID"></label>
+                <input asp-for="Input.EmployerID" class="form-control" />
+                <span asp-validation-for="Input.EmployerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Administrator"></label>
+                <input asp-for="Input.Administrator" type="checkbox" />
+                <span asp-validation-for="Input.Administrator" class="text-danger"></span>
+            </div>
             <button type="submit" class="btn btn-default">Register</button>
         </form>
     </div>
