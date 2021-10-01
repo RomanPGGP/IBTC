@@ -1,0 +1,28 @@
+﻿@model DateTime
+@{
+    ViewData["Title"] = "PostHour";
+}
+
+<h2>Post Hours Worked!</h2>
+
+@using (Html.BeginForm("postWorkedHours", "Employee"))
+{
+    <div> @Model.Date.ToShortDateString()</div>
+    <div>
+        <label name="dateToday" value=@Model.Date></label>
+    </div>
+    <div>
+        <label>Start Hour:</label>
+        <input type="time" id="appt" name="startHour" required>
+    </div>
+    <div>
+        <label>End Hour:</label>
+        <input type="time" id="appt" name="endHour" required>
+    </div>
+    <div>
+        <label>Venue ID:</label>
+        <input type="text" name="venue" value="12" />
+    </div>
+
+    <input type="submit" name="upload" value="Submit" />
+}

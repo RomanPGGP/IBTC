@@ -92,10 +92,17 @@ namespace WRKT.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl = returnUrl ?? Url.Content("~/");
+            if(Input.Administrator)
+            {
+                returnUrl = returnUrl ?? Url.Content("~/");
+            }
+            else
+            {
+                returnUrl = returnUrl ?? Url.Action("Index", "Employee");
+            }
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.FirstName, Email = Input.Email };
+                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)

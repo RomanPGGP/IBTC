@@ -1,0 +1,20 @@
+﻿@model List<WRKT.Models.TimeSlots>;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <ol>
+        @foreach (var item in Model)
+        {
+        <li>
+            <label>EmployeeID: @item.EmployeeID</label>
+            <label>Start Hour: @item.StartHour.ToLongTimeString()</label>
+            <label>Finish Hour: @item.FinishHour.ToShortTimeString() </label>
+            <label>Date: @item.StartHour.ToShortDateString()</label>
+        </li>
+        }
+    </ol>
+</div>

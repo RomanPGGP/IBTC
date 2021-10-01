@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "EmployeeHome";
+}
+
+<h2>Welcome! @ViewData["User"]</h2>
+
+@using (Html.BeginForm("calendarClick", "Employee"))
+{
+    DateTime dateToday = DateTime.Now;
+    int daysInMonth = DateTime.DaysInMonth(dateToday.Year, dateToday.Month);
+    DateTime date2show = new DateTime(dateToday.Year, dateToday.Month, 1);
+
+    <h1>@DateTime.Now.ToString("MMMM")</h1>
+    <div class="containeremployee">
+        
+        <div class="box">Monday</div>
+        <div class="box">Tuesday</div>
+        <div class="box">Wednesday</div>
+        <div class="box">Thursday</div>
+        <div class="box">Friday</div>
+        <div class="box">Saturday</div>
+        <div class="box">Sunday</div>
+        
+        @for (int j = date2show.Day; j <= daysInMonth; j++)
+        {
+            if (j == date2show.Day)
+            {
+                <button class="box" type="submit" name="day" style="grid-row-start: @date2show.DayOfWeek.GetHashCode()" value="@j">@j</button>
+            }
+            else
+            {
+                <button class="box" type="submit" name="day" value="@j">@j</button>
+            }
+        }
+    </div>
+}

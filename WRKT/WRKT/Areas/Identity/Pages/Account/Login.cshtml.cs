@@ -72,7 +72,7 @@ namespace WRKT.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl = returnUrl ?? Url.Content("~/");
+            returnUrl = returnUrl ?? Url.Action("Index","Employee");
 
             if (ModelState.IsValid)
             {
