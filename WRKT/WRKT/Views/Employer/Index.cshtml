@@ -10,11 +10,15 @@
         @foreach (var item in Model)
         {
         <li>
-            <label>EmployeeID: @item.EmployeeID</label>
-            <label>Start Hour: @item.StartHour.ToLongTimeString()</label>
-            <label>Finish Hour: @item.FinishHour.ToShortTimeString() </label>
-            <label>Date: @item.StartHour.ToShortDateString()</label>
+            <label>EmployeeID: @item.EmployeeID</label><br />
+            <label>Start Hour: @item.StartHour.ToLongTimeString()</label><br />
+            <label>Finish Hour: @item.FinishHour.ToShortTimeString() </label><br />
+            <label>Date: @item.StartHour.ToShortDateString()</label><br />
+            
+            <label>Approved?</label>
+            <input type="checkbox" />
         </li>
         }
     </ol>
+    <input type="submit" name="Review" value="Submit"  onclick="location.href='@Url.Action("Index", "Home")'"/>
 </div>

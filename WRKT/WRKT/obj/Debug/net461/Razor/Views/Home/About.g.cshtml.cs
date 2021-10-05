@@ -83,7 +83,7 @@ Write(ViewData["Message"]);
             WriteLiteral("</h3>\r\n\r\n<h1>WRKT is an application that provides an easy way to manage small teams to keep track of the time invested by every participant.</h1> <br />\r\n\r\n<div class=\"containerabout\">\r\n    <div class=\"itemabout\">\r\n        ");
             EndContext();
             BeginContext(317, 48, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ee42bbabc9f94147afbece58f1309d6f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b6f036a36107448e87a71345a0c33114", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -102,7 +102,7 @@ Write(ViewData["Message"]);
             WriteLiteral(" <br /><br />\r\n        <p>The user propose their time to the Admin.</p>\r\n    </div>\r\n\r\n    <div class=\"itemabout\">\r\n        ");
             EndContext();
             BeginContext(489, 45, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b65730c6c083400c9394a537ddafa3ee", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8826150e4eec41d0afde7960b352542c", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -121,7 +121,7 @@ Write(ViewData["Message"]);
             WriteLiteral("<br /><br />\r\n        <p>The Admin checks everything is in order.</p>\r\n    </div>\r\n\r\n    <div class=\"itemabout\">\r\n        ");
             EndContext();
             BeginContext(656, 46, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f0890b67f83a4fc5ad32e8d905dd5f8f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6f76b0a1c33f41219caaee6b89a4de5f", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

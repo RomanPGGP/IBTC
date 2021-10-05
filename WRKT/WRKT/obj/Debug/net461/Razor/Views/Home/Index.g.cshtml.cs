@@ -61,7 +61,7 @@ using WRKT.Models;
             WriteLiteral("\r\n<div>\r\n    <h1>Welcome to WRKT!</h1>\r\n    <p> Manage your teams with a simple tool in three simple steps!</p>\r\n    ");
             EndContext();
             BeginContext(162, 62, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "44b072c473cc423d944bc09562371162", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d034247a83934a2eb38c8eb6267f7a75", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
