@@ -33,10 +33,11 @@ CREATE TABLE Book(
 );
 
 CREATE TABLE PersonaBook(
-    PRIMARY KEY (PersonaId) REFERENCES Persona(PersonaId),
-    PRIMARY KEY (BookId) REFERENCES Book(BookId),
+    PersonaId REFERENCES Persona(PersonaId),
+    BookId REFERENCES Book(BookId),
     AcqDate DATETIME NOT NULL DEFAULT(GETDATE()),
     Fine INT NOT NULL,
+    CONSTRAINT PBCOMP_K PRIMARY KEY(PersonaId, BookId)
 );
 
 CREATE TABLE Author(
@@ -46,7 +47,7 @@ CREATE TABLE Author(
 );
 
 CREATE TABLE BookAuthor(
-    PRIMARY KEY (BookId) REFERENCES Book(BookId),
-    PRIMARY KEY (AuthorId) REFERENCES Author(AuthorId),
-    
+    BookId REFERENCES Book(BookId),
+    AuthorId REFERENCES Author(AuthorId),
+    CONSTRAINT BACOMP_K PRIMARY KEY(BookId, AuthorId)
 );
