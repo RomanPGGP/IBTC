@@ -1,3 +1,5 @@
+--Project
+--Script
 USE master;
 GO
 
@@ -20,22 +22,21 @@ CREATE TABLE Persona(
     PersonaId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
     FirstName NVARCHAR(200) NOT NULL,
     LastName NVARCHAR(200) NOT NULL,
-	PersonaCode INT NOT NULL,
-    FOREIGN KEY (PersonaCode) REFERENCES PersonaType(PersonaTypeId)
+    FOREIGN KEY (PersonaTypeId) REFERENCES PersonaType(PersonaTypeId)
 );
 
 CREATE TABLE Book(
-    BookId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+    BookId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY
     Title NVARCHAR(200) NOT NULL,
     Copies INT NOT NULL,
     Publisher NVARCHAR(200) NOT NULL
+
 );
 
 CREATE TABLE PersonaBook(
-    PersonaId INT NOT NULL FOREIGN KEY REFERENCES Persona(PersonaId),
-    BookId INT NOT NULL FOREIGN KEY REFERENCES Book(BookId),
+    FOREIGN KEY (PersonaId) REFERENCES Persona(PersonaId),
+    FOREIGN KEY (BookId) REFERENCES Book(BookId),
     AcqDate DATETIME NOT NULL DEFAULT(GETDATE()),
-	ReturnDate DATETIME NOT NULL,
     Fine MONEY NOT NULL,
     CONSTRAINT PBCOMP_K PRIMARY KEY(PersonaId, BookId)
 );
@@ -47,7 +48,7 @@ CREATE TABLE Author(
 );
 
 CREATE TABLE BookAuthor(
-    BookId INT NOT NULL FOREIGN KEY REFERENCES Book(BookId),
-    AuthorId INT NOT NULL FOREIGN KEY REFERENCES Author(AuthorId),
+    FOREIGN KEY (BookId) REFERENCES Book(BookId),
+    FOREIGN KEY (AuthorId) REFERENCES Author(AuthorId),
     CONSTRAINT BACOMP_K PRIMARY KEY(BookId, AuthorId)
 );
