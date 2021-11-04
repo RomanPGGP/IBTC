@@ -95,7 +95,7 @@ insert into PERSONA (FirstName, LastName, PersonaCode) values ('Muffin', 'Alcora
 insert into PERSONA (FirstName, LastName, PersonaCode) values ('Robbin', 'Sterrick', 1);
 insert into PERSONA (FirstName, LastName, PersonaCode) values ('Doralynn', 'Chastang', 1);
 insert into PERSONA (FirstName, LastName, PersonaCode) values ('Timmy', 'Kenn', 1);
-insert into PERSONA (FirstName, LastName, PersonaCode) values ('Cobby', 'Shakesby', 1;
+insert into PERSONA (FirstName, LastName, PersonaCode) values ('Cobby', 'Shakesby', 1);
 insert into PERSONA (FirstName, LastName, PersonaCode) values ('Chaim', 'Pawlik', 2);
 insert into PERSONA (FirstName, LastName, PersonaCode) values ('Gifford', 'Cattach', 2);
 insert into PERSONA (FirstName, LastName, PersonaCode) values ('Arlette', 'Merring', 2);
@@ -380,7 +380,7 @@ insert into PERSONABOOK (PersonaId, BookId, AcqDate, ReturnDate, Fine) values (8
 insert into PERSONABOOK (PersonaId, BookId, AcqDate, ReturnDate, Fine) values (19, 6, '10/23/2021', '2021-10-28', 60);
 insert into PERSONABOOK (PersonaId, BookId, AcqDate, ReturnDate, Fine) values (88, 93, '1/28/2021', '2021-01-30', 45);
 insert into PERSONABOOK (PersonaId, BookId, AcqDate, ReturnDate, Fine) values (80, 4, '7/31/2021', '2021-08-04', 45);
-insert into PERSONABOOK (PersonaId, BookId, AcqDate, ReturnDate, Fine) values (43, 30, '3/9/2021', '2021-03-12', 60);
+insert into PERSONABOOK (PersonaId, BookId, AcqDate, ReturnDate, Fine) values (42, 30, '3/9/2021', '2021-03-12', 60);
 insert into PERSONABOOK (PersonaId, BookId, AcqDate, ReturnDate, Fine) values (37, 57, '11/16/2020', '2020-11-21', 45);
 insert into PERSONABOOK (PersonaId, BookId, AcqDate, ReturnDate, Fine) values (10, 15, '5/4/2021', '2021-05-07', 45);
 insert into PERSONABOOK (PersonaId, BookId, AcqDate, ReturnDate, Fine) values (100, 43, '6/13/2021', '2021-06-18', 45);
