@@ -1,0 +1,11 @@
+C:\Users\USER 15\source\repos\PracticeTest\PracticeTest\bin\Debug\netcoreapp2.1\PracticeTest.deps.json
+C:\Users\USER 15\source\repos\PracticeTest\PracticeTest\bin\Debug\netcoreapp2.1\PracticeTest.runtimeconfig.json
+C:\Users\USER 15\source\repos\PracticeTest\PracticeTest\bin\Debug\netcoreapp2.1\PracticeTest.runtimeconfig.dev.json
+C:\Users\USER 15\source\repos\PracticeTest\PracticeTest\bin\Debug\netcoreapp2.1\PracticeTest.dll
+C:\Users\USER 15\source\repos\PracticeTest\PracticeTest\bin\Debug\netcoreapp2.1\PracticeTest.pdb
+C:\Users\USER 15\source\repos\PracticeTest\PracticeTest\obj\Debug\netcoreapp2.1\PracticeTest.csprojAssemblyReference.cache
+C:\Users\USER 15\source\repos\PracticeTest\PracticeTest\obj\Debug\netcoreapp2.1\PracticeTest.csproj.CoreCompileInputs.cache
+C:\Users\USER 15\source\repos\PracticeTest\PracticeTest\obj\Debug\netcoreapp2.1\PracticeTest.AssemblyInfoInputs.cache
+C:\Users\USER 15\source\repos\PracticeTest\PracticeTest\obj\Debug\netcoreapp2.1\PracticeTest.AssemblyInfo.cs
+C:\Users\USER 15\source\repos\PracticeTest\PracticeTest\obj\Debug\netcoreapp2.1\PracticeTest.dll
+C:\Users\USER 15\source\repos\PracticeTest\PracticeTest\obj\Debug\netcoreapp2.1\PracticeTest.pdb

@@ -20,7 +20,7 @@ public class Program
 				continue;
 			}
 			
-			computerOption = rand.Next(3);
+			computerOption = rand.Next(1,3);
 			
 			if(computerOption == userOption){
 				Console.WriteLine("Tied! Play again");
