@@ -69,7 +69,10 @@ namespace Fotone
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("headless");
 
-            IWebDriver dr = new ChromeDriver(options);
+            var driverService = ChromeDriverService.CreateDefaultService();
+            driverService.HideCommandPromptWindow = true;
+
+            IWebDriver dr = new ChromeDriver(driverService,options);
             dr.Navigate().GoToUrl(url);
             var res = dr.FindElements(By.ClassName("FFVAD"));
             string finalUrl;
