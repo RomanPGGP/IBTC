@@ -219,7 +219,7 @@ namespace mockTest
 
                     if (uNameChecked.Checked)
                     {
-                        fullCmd += $"WHERE NAME='{unName}'";
+                        fullCmd += $"WHERE FIRSTNAME='{unName}'";
                     }
                     else if (uLastNameChecked.Checked)
                     {
