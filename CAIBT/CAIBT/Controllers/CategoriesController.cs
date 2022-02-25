@@ -11,14 +11,17 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CAIBT.Controllers
 {
-    [Authorize(Roles = "Admin")]
+
+    [Authorize]//[Authorize(Roles = "Admin")]
     public class CategoriesController : Controller
     {
+        public List<string> selectedUsers;
         private readonly ApplicationDbContext _context;
 
         public CategoriesController(ApplicationDbContext context)
         {
             _context = context;
+            selectedUsers = new List<string>();
         }
 
         // GET: Categories
@@ -135,6 +138,7 @@ namespace CAIBT.Controllers
 
             return View(category);
         }
+
 
         // POST: Categories/Delete/5
         [HttpPost, ActionName("Delete")]

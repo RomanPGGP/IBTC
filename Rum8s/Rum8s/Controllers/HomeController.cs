@@ -17,14 +17,14 @@ namespace Rum8s.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "This is tool to help you deal with your roommates and also to manage all tasks equitably.";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Please find all the information about the developers below.";
 
             return View();
         }

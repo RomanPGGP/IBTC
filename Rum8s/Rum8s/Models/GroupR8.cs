@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Rum8s.Models
 {
@@ -12,5 +13,7 @@ namespace Rum8s.Models
         [MaxLength(200)]
         public string Description { get; set; }
 
+        public List<UserGroupR8> Users { get; set; }
+    
     }
 }
