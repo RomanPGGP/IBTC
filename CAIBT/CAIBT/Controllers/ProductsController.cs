@@ -10,7 +10,7 @@ using CAIBT.Models;
 using Microsoft.AspNetCore.Authorization;
 namespace CAIBT.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;

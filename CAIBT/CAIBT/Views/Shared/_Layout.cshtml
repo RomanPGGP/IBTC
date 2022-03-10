@@ -37,11 +37,8 @@
                     @if(User.Identity.IsAuthenticated == true)
                     {
                         <li><a asp-area="" asp-controller="Categories" asp-action="Index">Categories</a></li>
-                        @if(User.IsInRole("Admin")==true)
-                        {
-                            <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
-
-                        }
+                        <li><a asp-area="" asp-controller="Store" asp-action="Cart">Cart</a></li>
+                        <li><a asp-area="" asp-controller="Products" asp-action="Index">Products</a></li>
 
                     }
 
