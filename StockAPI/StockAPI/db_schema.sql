@@ -1,7 +1,8 @@
 create table STOCK_INFO (
 	id INT,
 	StockSymbol VARCHAR(50),
-	Company VARCHAR(50)
+	Company VARCHAR(50),
+	PRIMARY KEY (id)
 );
 
 create table STOCK_DATA (
@@ -15,5 +16,7 @@ create table STOCK_DATA (
 	SpanPriceOpen VARCHAR(50),
 	SpanPriceClose VARCHAR(50),
 	Volume INT,
-	ChangePercentage DECIMAL(3,2)
+	ChangePercentage DECIMAL(3,2),
+	PRIMARY KEY(id),
+	FOREIGN KEY (StockSymbolID) REFERENCES STOCK_INFO(id)
 );

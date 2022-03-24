@@ -55,6 +55,48 @@ namespace CAIBT.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("CAIBT.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CostumerId");
+
+                    b.Property<string>("DeliveryNotes");
+
+                    b.Property<DateTime>("OrderDate");
+
+                    b.Property<decimal>("Total");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("CAIBT.Models.OrderDetails", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("OrderId");
+
+                    b.Property<decimal>("Price");
+
+                    b.Property<int>("ProductId");
+
+                    b.Property<int>("Quantity");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderDetails");
+                });
+
             modelBuilder.Entity("CAIBT.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -247,6 +289,19 @@ namespace CAIBT.Data.Migrations
 
             modelBuilder.Entity("CAIBT.Models.Cart", b =>
                 {
+                    b.HasOne("CAIBT.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("CAIBT.Models.OrderDetails", b =>
+                {
+                    b.HasOne("CAIBT.Models.Order", "Order")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("CAIBT.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")

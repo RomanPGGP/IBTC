@@ -41,6 +41,8 @@ namespace CAIBT
                 .AddRoles<IdentityRole>() 
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.AddSession();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -61,6 +63,8 @@ namespace CAIBT
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            app.UseSession();
 
             app.UseAuthentication();
 

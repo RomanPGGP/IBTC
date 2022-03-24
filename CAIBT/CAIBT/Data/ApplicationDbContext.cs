@@ -16,9 +16,15 @@ namespace CAIBT.Data
 
         public DbSet<Cart> Carts { get; set; }
 
+        public DbSet<CAIBT.Models.Order> Orders { get; set; }
+
+        public DbSet<CAIBT.Models.OrderDetails> OrderDetails { get; set; }
+        
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
+
     }
 }
